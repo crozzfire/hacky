@@ -25,7 +25,19 @@ Template[getTemplate('layout')].helpers({
   },
   getTemplate: function () {
     return getTemplate(this.template);
-  }
+  },
+  views: function () {
+    return getTemplate('views');
+  },  
+  categories: function () {
+    return getTemplate('categoriesMenu');
+  },
+  search: function() {
+    return getTemplate('search');
+  },
+  adminMenu: function(){
+    return getTemplate('adminMenu');
+  }  
 });
 
 Template[getTemplate('layout')].created = function(){

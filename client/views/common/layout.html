@@ -4,17 +4,27 @@
   <div class="outer-wrapper {{currentPage}}">
     {{> UI.dynamic template=mobile_nav}}
     <div class="inner-wrapper template-{{pageName}}">
-      {{> UI.dynamic template=nav}}
+      {{> UI.dynamic template=nav}}      
       <div class="content-wrapper">
-        {{> UI.dynamic template=error}}
-        {{#each heroModules}}
-          {{> UI.dynamic template=getTemplate}}
-        {{/each}}
-        {{> yield}}
-        {{> UI.dynamic template=footer}}
-      </div>
-      <div class="overlay hidden"></div>
+
+
+    <div class="sidebar">
+      {{> UI.dynamic template=search}}                      
+      {{> UI.dynamic template=categories}}            
+      {{> UI.dynamic template=adminMenu}}
+
     </div>
-    {{{extraCode}}}
+
+    {{> UI.dynamic template=views}}        
+    {{> UI.dynamic template=error}}
+    {{#each heroModules}}
+      {{> UI.dynamic template=getTemplate}}
+    {{/each}}
+    {{> yield}}
+    {{> UI.dynamic template=footer}}
+      </div>
+    <div class="overlay hidden"></div>
+    </div>
+  {{{extraCode}}}
   </div>
 </template>

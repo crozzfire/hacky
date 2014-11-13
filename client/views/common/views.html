@@ -1,0 +1,9 @@
+<template name="views">
+  {{#if canView}}        
+  <div class="views">
+     | {{#each views}}
+        <a href="{{pathFor route}}" class="secondary" > {{i18n label}} </a> | 
+       {{/each}}     
+  </div>           
+  {{/if}}
+</template>
