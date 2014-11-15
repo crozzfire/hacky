@@ -1527,3 +1527,17 @@ a.mt-share-inline-square-sm {
   top: 70px;
   left:10px;
 }
+
+#about h3{
+  color:#009BD2;
+}
+
+#about h4{
+  font-weight: bold;
+}
+
+#aboutLink{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+

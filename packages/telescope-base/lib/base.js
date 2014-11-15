@@ -11,7 +11,10 @@ addToSettingsSchema = [];
 // array containing nav items; initialize with views menu and admin menu
 primaryNav = ['viewsMenu', 'adminMenu'];
 
-secondaryNav = ['userMenu', 'notificationsMenu', 'submitButton'];
+secondaryNav = ['aboutLink', 'userMenu', 'notificationsMenu', 'submitButton'];
+
+//Flag to check if the page is static
+isStaticPage = false;
 
 // array containing items in the admin menu
 adminNav = [];

@@ -37,6 +37,10 @@ Template[getTemplate('layout')].helpers({
   },
   adminMenu: function(){
     return getTemplate('adminMenu');
+  },
+  isStaticPage: function(){
+    console.log(isStaticPage);
+    return isStaticPage;
   }  
 });
 

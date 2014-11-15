@@ -7,15 +7,16 @@
       {{> UI.dynamic template=nav}}      
       <div class="content-wrapper">
 
+    {{#unless isStaticPage}}    
+      <div class="sidebar">
+        {{> UI.dynamic template=search}}                      
+        {{> UI.dynamic template=categories}}            
+        {{> UI.dynamic template=adminMenu}}
+      </div>
 
-    <div class="sidebar">
-      {{> UI.dynamic template=search}}                      
-      {{> UI.dynamic template=categories}}            
-      {{> UI.dynamic template=adminMenu}}
+      {{> UI.dynamic template=views}}        
+    {{/unless}}
 
-    </div>
-
-    {{> UI.dynamic template=views}}        
     {{> UI.dynamic template=error}}
     {{#each heroModules}}
       {{> UI.dynamic template=getTemplate}}
