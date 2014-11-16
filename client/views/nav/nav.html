@@ -6,14 +6,14 @@
     </a>
 
     {{#if logo_url}}
-      <h1 class="logo logo-image header-module">
+      <div class="logo logo-image header-module">
         <a href="/">
-          <img src="{{logo_url}}" alt="{{site_title}}"/>
-        </a>
-      </h1>
-    {{else}}
-      <h1 class="logo header-module"><a href="/">{{site_title}}</a></h1>
-    {{/if}}
+          <img src="{{logo_url}}" alt="{{site_title}}"/>          
+        </a>        
+      </div>
+    {{/if}} 
+    <!-- fucking hack !-->
+    <h1 class="logo header-module" style="margin-left:60px"> <a href="/">{{site_title}}</a></h1>     
 
     {{#if hasSecondaryNav}}
       <ul class="nav secondary-nav desktop-nav {{dropdownClass}} header-module desktop-only">

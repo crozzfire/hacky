@@ -321,7 +321,6 @@ em {
       padding: 0 10px; } }
   /* line 12, ../scss/modules/_nav.scss */
   .header .primary-nav {
-    float: left;
     z-index: 20;
     position: relative; }
   /* line 17, ../scss/modules/_nav.scss */

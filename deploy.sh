@@ -1,17 +1,16 @@
 #!/bin/bash
 
-sudo killall nodejs;
-sudo rm -rf ../bundle > /dev/null 2>&1;
-sudo rm -rf ../bundle.tgz > /dev/null 2>&1;
+sudo meteor build ../hacky_prod
 
-sudo mrt bundle ../hacky_prod.tgz
-cd ..;
-sudo tar -zxvf hacky_prod.tgz;
-
-export MONGO_URL='mongodb://localhost';
+export MONGO_URL='mongodb://localhost:27017/hacky';
 export ROOT_URL='http://hacky.co';
 export BIND_IP='0.0.0.0';
 export PORT=3000;
 
-sudo -E forever restart hacky_prod/main.js || sudo -E forever start hacky_prod/main.js;
+cd ../hacky_prod;
+tar xvzf hacky_src.tar.gz
 
+(cd bundle/programs/server && sudo npm install);
+cd bundle;
+
+sudo -E forever restart -l forever.log -o out.log -e err.log -a main.js || sudo -E forever start -l forever.log -o out.log -e err.log -a main.js
