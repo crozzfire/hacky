@@ -8,7 +8,7 @@ export BIND_IP='0.0.0.0';
 export PORT=3000;
 
 cd ../hacky_prod;
-tar xvzf hacky_src.tar.gz
+sudo tar xvzf hacky_src.tar.gz
 
 (cd bundle/programs/server && sudo npm install);
 cd bundle;

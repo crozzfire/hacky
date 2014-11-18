@@ -40,6 +40,15 @@ Template[getTemplate('nav')].helpers({
   },
   requirePostsApproval: function(){
     return getSetting('requirePostsApproval');
+  },
+  categories: function () {
+    return getTemplate('categoriesMenu');
+  },
+  search: function() {
+    return getTemplate('search');
+  },
+  adminMenu: function(){
+    return getTemplate('adminMenu');
   }
 });
 

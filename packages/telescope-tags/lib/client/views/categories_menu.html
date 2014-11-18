@@ -1,11 +1,9 @@
 <template name="categoriesMenu">
 {{#if hasCategories}}
-<div class='categories'>   
-   <ul role="menu" aria-labelledby="dLabel">
+   
           {{# each categories}}
-            <li><a href="{{categoryLink}}">{{name}}</a></li>
+            <h3 class="header-module"><a href="{{categoryLink}}">{{name}}</a></h3>
           {{/each}}
-    </ul>
-</div>
+    
 {{/if}}
 </template>

@@ -28,16 +28,7 @@ Template[getTemplate('layout')].helpers({
   },
   views: function () {
     return getTemplate('views');
-  },  
-  categories: function () {
-    return getTemplate('categoriesMenu');
-  },
-  search: function() {
-    return getTemplate('search');
-  },
-  adminMenu: function(){
-    return getTemplate('adminMenu');
-  },
+  },    
   isStaticPage: function(){
     console.log(isStaticPage);
     return isStaticPage;

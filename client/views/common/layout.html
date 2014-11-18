@@ -7,13 +7,7 @@
       {{> UI.dynamic template=nav}}      
       <div class="content-wrapper">
 
-    {{#unless isStaticPage}}    
-      <div class="sidebar">
-        {{> UI.dynamic template=search}}                      
-        {{> UI.dynamic template=categories}}            
-        {{> UI.dynamic template=adminMenu}}
-      </div>
-
+    {{#unless isStaticPage}}                                         
       {{> UI.dynamic template=views}}        
     {{/unless}}
 
